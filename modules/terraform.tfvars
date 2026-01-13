@@ -16,3 +16,6 @@ vpc_configs = {
     map_public_ip_on_launch = true
     enable_nat_gateway      = true
 }
+
+env = "dev"
+identifier = "demoproject"
