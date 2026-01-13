@@ -5,7 +5,7 @@ variable "aws_region" {}
 ################################################################################
 # VPC
 ################################################################################
-variable "tags" {}
+# variable "tags" {}
 
 variable "vpc_configs" {
   description = "Map of VPC configurations"
