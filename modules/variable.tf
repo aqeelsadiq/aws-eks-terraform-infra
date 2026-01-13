@@ -29,3 +29,57 @@ variable "vpc_configs" {
 
 variable "identifier" {}
 variable "env" {}
+
+
+
+# variable "region" {
+#   description = "AWS region"
+#   type        = string
+# }
+
+# variable "environment" {
+#   description = "Environment name"
+#   type        = string
+# }
+
+variable "cluster_name" {
+  description = "EKS cluster name"
+  type        = string
+}
+
+variable "kubernetes_version" {
+  description = "Kubernetes version"
+  type        = string
+  default     = "1.29"
+}
+
+# variable "vpc_id" {
+#   description = "Existing VPC ID"
+#   type        = string
+# }
+
+# variable "private_subnet_ids" {
+#   description = "Private subnet IDs for EKS"
+#   type        = list(string)
+# }
+
+variable "instance_types" {
+  description = "EC2 instance types for worker nodes"
+  type        = list(string)
+  default     = ["t3.medium"]
+}
+
+variable "node_min_size" {
+  type    = number
+  default = 1
+}
+
+variable "node_max_size" {
+  type    = number
+  default = 3
+}
+
+variable "node_desired_size" {
+  type    = number
+  default = 2
+}
