@@ -3,7 +3,7 @@ module "eks" {
   version = "~> 20.0"
 
   cluster_name    = var.cluster_name
-  cluster_version = "1.29"
+  cluster_version = "1.31"
 
   vpc_id     = var.vpc_id
   subnet_ids = var.private_subnet_ids   
@@ -15,7 +15,7 @@ module "eks" {
 
   eks_managed_node_groups = {
     default = {
-      instance_types = ["t3.micro"]
+      instance_types = ["t2.micro"]
       min_size       = 1
       max_size       = 3
       desired_size   = 2
